@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="16dp"
@@ -34,64 +35,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/contractSwitch"
-        android:text="@string/learning_contract"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <!-- Switch has been removed -->
 
     <LinearLayout
         android:id="@+id/contractLayout"
         android:orientation="vertical"
-        android:visibility="gone"
-        tools:visibility="visible"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="8dp">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
 
-        <androidx.core.widget.NestedScrollView
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/contractTabLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true">
+            android:layout_height="wrap_content"
+            app:tabMode="scrollable" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/studentMotivation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    tools:text="Sample Motivation: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
-                <TextView
-                    android:id="@+id/studentHindrances"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    tools:text="Sample Hindrances: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
-                <TextView
-                    android:id="@+id/studentGoals"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    tools:text="Sample Goals: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."/>
-                <TextView
-                    android:id="@+id/studentExpectations"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    tools:text="Sample Expectations: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
-                <TextView
-                    android:id="@+id/studentContributions"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    tools:text="Sample Contributions: Excepteur proident, sunt in est laborum."/>
-            </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/contractViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
     </LinearLayout>
 </LinearLayout>

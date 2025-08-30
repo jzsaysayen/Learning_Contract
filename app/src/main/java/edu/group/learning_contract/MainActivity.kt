@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
-        adapter = StudentAdapter(studentList)
+        adapter = StudentAdapter(studentList, this)
         viewPager.adapter = adapter
 
         // Initialize dots and set initial page
