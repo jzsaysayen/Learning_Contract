@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Learning_Contract</string>
+
+    <string name="student_image_desc">Student profile picture</string>
+
+    <string name="learning_contract">Learning Contract</string>
+
+    <string name="motivation">Motivation: %1$s</string>
+    <string name="hindrances">Hindrances: %1$s</string>
+    <string name="goals">Goals: %1$s</string>
+    <string name="expectations">Expectations: %1$s</string>
+    <string name="contributions">Contributions: %1$s</string>
+</resources>
