@@ -49,11 +49,11 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3) // For Jetpack Compose Material 3
-    implementation("com.google.android.material:material:1.11.0") // Added for View System Material Components
+    implementation(libs.androidx.material3)
+    implementation("com.google.android.material:material:1.11.0")
     implementation(libs.androidx.viewpager2)
     implementation(libs.androidx.appcompat)
-    implementation("androidx.core:core-splashscreen:1.0.0") // <<< ADDED THIS LINE
+    implementation("androidx.core:core-splashscreen:1.0.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

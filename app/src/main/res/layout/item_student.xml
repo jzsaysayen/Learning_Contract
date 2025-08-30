@@ -35,8 +35,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <!-- Switch has been removed -->
-
     <LinearLayout
         android:id="@+id/contractLayout"
         android:orientation="vertical"

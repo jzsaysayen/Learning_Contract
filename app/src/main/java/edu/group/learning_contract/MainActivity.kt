@@ -8,10 +8,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen // Added for splash screen
 import androidx.viewpager2.widget.ViewPager2
-import androidx.compose.material3.Text // Added for Compose
-import androidx.compose.runtime.Composable // Added for Compose
-import androidx.compose.ui.tooling.preview.Preview // Added for Compose Preview
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -129,20 +125,3 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-// Added Composable functions for Preview
-@Composable
-fun SimpleGreetingPreview(name: String) {
-    Text(text = "Hello $name! This is a Compose Preview.")
-}
-
-@Preview(showBackground = true, name = "Default App Preview")
-@Composable
-fun AppDefaultPreview() {
-    // If you have a Compose Theme (e.g., in a Theme.kt file for Compose),
-    // you should wrap SimpleGreetingPreview with it for a more accurate preview:
-    // YourAppComposeTheme {
-    //     SimpleGreetingPreview("Android")
-    // }
-    // For now, a direct call:
-    SimpleGreetingPreview("Android")
-}

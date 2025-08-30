@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.tabs.TabLayoutMediator
 import edu.group.learning_contract.databinding.ItemStudentBinding
 
-// 1. Modified constructor to accept FragmentActivity
 class StudentAdapter(
     private val studentList: List<Student>,
     private val fragmentActivity: FragmentActivity
@@ -23,9 +22,6 @@ class StudentAdapter(
             binding.studentStrand.text = student.strand
             binding.studentAddress.text = student.address
 
-            // 2. Old text setting and switch logic is removed.
-
-            // 3. Setup inner ViewPager2 and TabLayout
             val sectionsPagerAdapter = ContractSectionsPagerAdapter(fragmentActivity, student)
             binding.contractViewPager.adapter = sectionsPagerAdapter
 
@@ -42,16 +38,13 @@ class StudentAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        if (studentList.isEmpty()) {
-            // This case should ideally be handled by getItemCount returning 0
-            // and MainActivity not even trying to set up the adapter if the list is empty.
-            // However, if it reaches here, we might want to ensure ViewHolder doesn't crash.
-            // For now, returning, assuming getItemCount and MainActivity handle empty states.
-            return
-        }
+        // The 'if (studentList.isEmpty())' check is removed from here,
+        // as getItemCount() now returns 0 for an empty list, so this method
+        // won't be called if the list is empty.
 
-        // Your existing logic for handling phantom pages
         val actualItemCount = studentList.size
+        // Since getItemCount() returns 0 for an empty list, actualItemCount will be > 0 here.
+
         val studentToBind: Student = when (position) {
             0 -> studentList[actualItemCount - 1] // Phantom start
             actualItemCount + 1 -> studentList[0] // Phantom end
